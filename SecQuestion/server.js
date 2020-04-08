@@ -10,6 +10,7 @@ app.set('view engine','ejs');
 app.use('/public',express.static('public'))
 
 
+
 app.get('/',function (req,res) {
     res.render('index',{text:" Выбери оператора и нажми оплатить"});
  });
