@@ -1,0 +1,15 @@
+.title{
+    position: relative;
+    font-family: fantasy;
+    text-align: center;
+    text-transform: uppercase;
+    color:black;
+}
+.img_oper{
+    margin-top: 75px;
+    width: 200px;
+    height: 150px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

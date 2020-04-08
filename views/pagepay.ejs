@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayPage</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="/public/css/pagepay.css">
+</head>
+<body>
+    <%- include ('header.ejs') %>
+     <div class="container">
+         <div class="row">
+             <div class="col-lg-12">
+                <h1 class="title"> Оператор <%=operName %></h1>
+             </div>
+         </div>
+    
+        <div class="row ">
+            <div class="col-lg-12">
+                <% if(operName === "BEELINE"){ %>
+                    <img class="img_oper" src="https://teranews.net/wp-content/uploads/2019/07/samyj-deshevyj-mobilnyj-internet-v-rossii-7.jpg" alt="">
+                <% } %>
+                <% if(operName === "MTS"){ %>
+                     <img  class="img_oper" src="https://agat74.ru/images/upload/4af0f916df.jpg" alt="">
+                <% } %>
+                <% if(operName === "MEGAPHONE"){ %>
+                    <img  class="img_oper" src="https://cdn5.zp.ru/job/attaches/2015/11/e4/2f/e42fa7e096c3a8440597ab1fdf65ddc7.jpg" alt="">
+                <% } %>
+            </div>
+        </div>
+    
+    
+        <div class="row">
+            <div class="col-lg-12">
+                <form method="post" action="/index">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Номер</label>
+                      <input type="tel" name="tel" id="phone" required  class="form-control" id="exampleInputEmail1"  placeholder=" +7-(999)-999-99-99" >
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1" >Сумма</label>
+                      <input type="number"  required  name="amount" id="amount"  class="form-control" placeholder="0" >
+                      <small >Введите сумму от 1 до 1000</small>
+                    </div>
+                    <div class="form-group form-check">
+                    </div>
+                    <button   action="POST"type="submit" id="submit" class="btn btn-primary">Отправить</button>
+                </form>
+                  
+            </div>
+        </div>
+    </div>
+    
+    
+</body>
+    <script src="/public/js/jquery.maskedinput.min.js"></script>
+    <script src="/public/js/pagepay.js"> </script>
+</html> 

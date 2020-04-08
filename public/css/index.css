@@ -1,0 +1,54 @@
+body{
+    background-color: azure;
+}
+
+.center-block{
+    margin:0 auto;
+}
+.descr{
+    font-family: 'Roboto';
+    font-weight: 700;
+    background-color: rgba(0,0,0,.5);
+    text-align: center;
+    margin-top: 10px;
+    color:white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 130px;
+    display: none;
+}
+.operator{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.operator_img{
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+    width: 180px;
+    height: 130px; 
+    
+}
+.operator_img:hover + .descr{   
+    display: block;
+}
+.path{
+
+    border:2px solid white;
+    text-decoration: none;
+    color:rgb(239, 165, 241);
+    font-weight: 700;
+}
+.popup{
+    transition: all 0.5s;
+    width: 200px;
+    height: 100px;
+    float: left;
+    background-color: rgb(148, 118, 189,0.5);
+}
+.popup span{
+    color:black;
+}
